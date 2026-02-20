@@ -135,7 +135,7 @@ request.then(result=>console.log(result)).catch(error=>console.log(error)) */
 // let temp = homeWork()
 // console.log(temp)
 
-
+/* 
 let cart = ["laptop","mobile","earphones"]
 function createOrder(cart){
     return new Promise((resolve, reject)=>{
@@ -212,3 +212,68 @@ createOrder().then((order)=>{
 }).then ((order)=>{
     console.log("Confirmed order", order)
 }).catch(error=>console.log(error))
+ */
+
+/* async function ecommerce(){
+    try{
+        let order1 = await createOrder(cart)
+        console.log(order1);
+        let order2 = await makePayment(order1)
+        console.log(order2);
+        let order3 = await createOrder(order2)
+        console.log(order3);
+        let order1 = await createOrder(cart)
+        console.log(order1);
+    }
+} */
+
+
+// API FETCH
+let body = document.querySelector('body')
+// async function fetchProduct(){
+//     let response = await fetch('https://dummyjson.com/products')
+//     // console.log(response);
+//     let data = await response.json()
+//     let elements = data.products
+//     // console.log(elements);
+//     elements.forEach((item,index)=>{
+//         let card = document.createElement('div')
+//         card.innerHTML = `<img src= "${item.images[0]}" alt = "${item.title}">
+//         <h3>${item.title}</h3>`
+//         card.classList.add('card')
+//         body.append(card)
+//     })
+// }
+// fetchProduct()
+
+async function fetchQuotes(){
+    let response = await fetch('https://dummyjson.com/quotes')
+    // console.log(response);
+    let data = await response.json()
+     
+    let elements = data.quotes
+    console.log(elements);
+    elements.forEach((item)=>{
+        let card = document.createElement('div')
+        card.innerHTML = `
+        <h3>${item.author}</h3>
+        <span>${item.id}</span>
+        <p>${item.quote}</p>`
+        card.classList.add('card')
+        body.append(card)
+    })
+}
+fetchQuotes()
+
+// async function getPosts(){
+//     let res = await fetch('https://dummyjson.com/posts')
+//     let data = await res.json()
+//     console.log(data);
+// }
+// getPosts()
+// async function getToDo(){
+//     let res = await fetch('https://dummyjson.com/todos')
+//     let data = await res.json()
+//     console.log(data);
+// }
+// getToDo()
