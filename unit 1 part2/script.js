@@ -229,7 +229,7 @@ createOrder().then((order)=>{
 
 
 // API FETCH
-let body = document.querySelector('body')
+/* let body = document.querySelector('body')
 // async function fetchProduct(){
 //     let response = await fetch('https://dummyjson.com/products')
 //     // console.log(response);
@@ -263,7 +263,7 @@ async function fetchQuotes(){
         body.append(card)
     })
 }
-fetchQuotes()
+fetchQuotes() */
 
 // async function getPosts(){
 //     let res = await fetch('https://dummyjson.com/posts')
@@ -277,3 +277,88 @@ fetchQuotes()
 //     console.log(data);
 // }
 // getToDo()
+/* sessionStorage.setItem("Name","Alex")
+sessionStorage.setItem("Emotion","Happy")
+sessionStorage.setItem("Fruit","Apple")
+let data1 = sessionStorage.getItem("Name")
+let data2 = sessionStorage.getItem("Emotion")
+let data3 = sessionStorage.getItem("Fruit")
+console.log(data1)
+console.log(data2)
+console.log(data3)
+sessionStorage.removeItem("Name")
+sessionStorage.clear()
+ */
+// localStorage.setItem("Name","Alex")
+// sessionStorage.setItem("Name","Joy")
+
+// Cookies: stored on clientside , give utc time
+
+// document.cookie = "user=alex ; expires=Thu, 26 Feb 2026, 04:16:00 UTC;"
+// document.cookie = "adjectve=beautiful ; expires=Thu, 26 Feb 2026, 04:16:00 UTC;"
+// document.cookie = "fruit=apple ; expires=Thu, 26 Feb 2026, 04:25:00 UTC;"
+
+// GENERATOR FUNCTION: advanced function that has the capability pause and play itself
+
+// basic syntax: function* name(){} yield: interaval setter i guess
+// example: Traffic Light
+
+/* function* trafficLight(){
+
+
+    yield "red"
+    
+    
+    yield "yellow"
+    
+    
+    yield "green"
+}
+
+let va = trafficLight()
+console.log(va.next());
+
+console.log(va.next());
+console.log(va.next());
+console.log(trafficLight());
+ */
+// function* education(){
+
+//     console.log("100%");
+//     yield "Primary Education"
+
+//     console.log("100%");
+//     yield "Secondary Education"
+
+//     console.log("100%");
+//     yield "Senior Seconday Education"
+
+//     console.log("ON Going");
+//     yield "Universtiy"
+// }
+// let res = education()
+// console.log(res.next());
+// console.log(res.next());
+// console.log(res.next());
+// console.log(res.next());
+
+// console.log(res.next().value);
+
+// console.log(res.next().done);
+
+// function* addition(a,b,c,d){
+//     let res1 = a+b
+//     yield res1
+
+//     let res2 = res1+c
+//     yield res2
+
+//     let res3 = res2+d
+//     yield res3
+
+// }
+// let end = addition(2,3,4,7)
+// console.log(end.next().value);
+// console.log(end.next().value);
+// console.log(end.next().value);
+
